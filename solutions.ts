@@ -39,3 +39,8 @@ interface Course {
 function getPopularCourses(courses: Course[], minStudents: number): Course[] {
     return courses.filter(course => course.isPublished && course.students >= minStudents);
 }
+
+
+function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
+    return items.map(obj => obj[key]);
+}
