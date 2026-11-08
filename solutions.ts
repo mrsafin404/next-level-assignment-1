@@ -17,3 +17,14 @@ function processInput(value: string | number | boolean): string | number {
 function formatCoordinate(tuple: readonly [number, number, string]): string {
     return `Location: ${tuple[2]} (${tuple[0]}, ${tuple[1]})`;
 }
+
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+    let concatedArray: T[] = [];
+
+    arrays.forEach(arr => {
+        concatedArray.push(...arr);
+    })
+
+    return concatedArray;
+}
