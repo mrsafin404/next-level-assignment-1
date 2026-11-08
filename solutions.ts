@@ -12,3 +12,8 @@ function processInput(value: string | number | boolean): string | number {
         return value ? "Active" : "Inactive";
     }
 }
+
+
+function formatCoordinate(tuple: readonly [number, number, string]): string {
+    return `Location: ${tuple[2]} (${tuple[0]}, ${tuple[1]})`;
+}
